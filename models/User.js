@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const moment = require('moment');
 
 const UserSchema = new Schema(
   {
@@ -30,9 +31,7 @@ const UserSchema = new Schema(
   {
     toJSON: {
       virtuals: true
-    },
-    // prevents virtual from creating duplicates of the id
-    id: false
+    }
   }
 )
 
